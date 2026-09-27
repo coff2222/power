@@ -1,0 +1,26 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>1차시 - Firebase 마법 금고 열기</title>
+</head>
+<body>
+<h1>🌟 Firebase 클라우드 연결 테스트</h1>
+<p id="status">연결 중...</p>
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+// 본인의 Firebase 콘솔에서 복사한 설정 키를 붙여넣습니다.
+const firebaseConfig = {
+apiKey: "YOUR_API_KEY",
+authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
+projectId: "YOUR_PROJECT_ID",
+storageBucket: "YOUR_PROJECT_ID.appspot.com",
+messagingSenderId: "SENDER_ID",
+appId: "APP_ID"
+};
+const app = initializeApp(firebaseConfig);
+document.getElementById("status").innerText = "🎉 축하합니다! 클라우드 마법 금고에 연결되었습니다!";
+</script>
+</body>
+</html>
